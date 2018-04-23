@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>Drag and Drop Test</h2>
+    <!-- <p>The .table-hover class enables a hover state on table rows:</p> -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th *ngFor="let day of days">{{day}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users" [dragula]='"bag-items"' [dragulaModel]='days'>
+                <td *ngFor="let day of days">
+                    <fa [name]="'user'" [size]=3></fa>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
